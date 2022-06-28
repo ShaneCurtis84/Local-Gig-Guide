@@ -1,0 +1,23 @@
+{
+  "name": "local-gig-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaneCurtis84/Local-Gig-Guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaneCurtis84/Local-Gig-Guide/issues"
+  },
+  "homepage": "https://github.com/ShaneCurtis84/Local-Gig-Guide#readme",
+  "devDependencies": {
+    "graphql": "^16.5.0"
+  }
+}
