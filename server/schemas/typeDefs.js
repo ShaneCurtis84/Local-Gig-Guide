@@ -6,6 +6,7 @@ type User {
     _id: ID
     username: String!
     email: String!
+    password: String!
    
         
   }
@@ -15,7 +16,10 @@ type User {
     me: User
   }
 
-
+  type Mutation {
+    addUser(username: String!, email: String!, password: String!): User
+  
+  }
 
 
 `;

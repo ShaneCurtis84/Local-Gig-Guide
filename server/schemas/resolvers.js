@@ -14,6 +14,23 @@ const resolvers = {
   },
 
 
+  Mutation: {
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({ username, email, password });
+      
+      if (!user) {
+          throw new AuthenticationError('Something is wrong!')
+      } 
+ 
+      return { user };
+    },
+
+
+
+  
+  },
 };
+
+
 
 module.exports = resolvers;
