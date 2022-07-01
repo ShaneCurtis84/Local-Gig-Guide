@@ -1,5 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Gig } = require("../models");
+const { signToken } = require("../utils/auth");
 
 
 
@@ -23,7 +24,26 @@ const resolvers = {
           throw new AuthenticationError('Something is wrong!')
       } 
  
-      return { user };
+      const token = signToken(user);
+      return { token, user };
+
+    },
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError("No user found with this email address");
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError("Wrong password");
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
     },
 
     addGig: async (parent, {tourName,eventDate,eventTime,venue,description,links,city}) => {
