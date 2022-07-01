@@ -1,5 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
+const { User, Gig } = require("../models");
+
 
 
 const resolvers = {
@@ -24,6 +25,14 @@ const resolvers = {
  
       return { user };
     },
+
+    addGig: async (parent, {tourName,eventDate,eventTime,venue,description,links,city}) => {
+
+       const gig = await Gig.create({tourName,eventDate,eventTime,venue,description,links,city});
+
+       return { gig };
+    
+    }
 
 
 
