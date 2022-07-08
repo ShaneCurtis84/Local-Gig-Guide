@@ -17,7 +17,5 @@
     "url": "https://github.com/ShaneCurtis84/Local-Gig-Guide/issues"
   },
   "homepage": "https://github.com/ShaneCurtis84/Local-Gig-Guide#readme",
-  "devDependencies": {
-    "graphql": "^15.5.1"
-  }
+ 
 }

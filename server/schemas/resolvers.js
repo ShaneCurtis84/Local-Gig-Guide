@@ -1,6 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Gig } = require("../models");
-const { signToken } = require("../utils/auth");
+const { signToken } = require('../utils/auth');
 
 
 
@@ -11,10 +11,9 @@ const resolvers = {
         const userData = await User.findOne({ _id: context.user._id });
         return userData;
       }
-      throw new AuthenticationError("Cannot find a user with this id!");
+      throw new AuthenticationError('Cannot find a user with this id!');
     },
   },
-
 
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
@@ -23,22 +22,20 @@ const resolvers = {
       if (!user) {
           throw new AuthenticationError('Something is wrong!')
       } 
- 
       const token = signToken(user);
       return { token, user };
-
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError("No user found with this email address");
+        throw new AuthenticationError('No user found with this email address');
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError("Wrong password");
+        throw new AuthenticationError('Wrong password');
       }
 
       const token = signToken(user);
@@ -52,7 +49,7 @@ const resolvers = {
 
        return { gig };
     
-    }
+    },
 
 
 
