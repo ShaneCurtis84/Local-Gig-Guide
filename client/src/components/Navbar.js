@@ -9,8 +9,8 @@ function NavBar() {
       return (
         <ul>
           <li>
-            <Link to="/profile">
-              My Rankings
+            <Link to="/">
+              Check out the local gigs
             </Link>
           </li>
           <li>
