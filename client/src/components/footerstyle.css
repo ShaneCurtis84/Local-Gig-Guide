@@ -1,0 +1,15 @@
+/*Footer div*/
+
+footer {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a9a9a9;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+  }
+  

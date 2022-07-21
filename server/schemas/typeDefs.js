@@ -16,18 +16,28 @@ type User {
 
   type Query {
     me: User
+  
+  }
+  
+
+  type Query {
+    gigs: [Gig]
+  
   }
 
 
+
+
+
   type Gig {
-  _id: ID
+  _id:ID
   tourName:String!
   eventDate:String!
   eventTime:String!
   venue:String!
   description:String!
   links:String!
-  city:String!
+  image:String!
   
 
 
@@ -38,7 +48,8 @@ type User {
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addGig(tourName: String!, eventDate:String!, eventTime:String!, venue:String!, description:String!, links:String!, city:String!): Gig
+    addGig(tourName: String!, eventDate:String!, eventTime:String!, venue:String!, description:String!, links:String!, image:String!): Gig
+
   
   }
 

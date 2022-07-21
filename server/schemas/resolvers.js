@@ -13,6 +13,9 @@ const resolvers = {
       }
       throw new AuthenticationError('Cannot find a user with this id!');
     },
+    gigs: async () => {
+      return await Gig.find({})
+     }
   },
 
   Mutation: {
@@ -43,9 +46,9 @@ const resolvers = {
       return { token, user };
     },
 
-    addGig: async (parent, {tourName,eventDate,eventTime,venue,description,links,city}) => {
+    addGig: async (parent, {tourName,eventDate,eventTime,venue,description,links,image}) => {
 
-       const gig = await Gig.create({tourName,eventDate,eventTime,venue,description,links,city});
+       const gig = await Gig.create({tourName,eventDate,eventTime,venue,description,links,image});
 
        return { gig };
     

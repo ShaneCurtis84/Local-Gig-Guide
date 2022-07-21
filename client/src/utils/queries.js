@@ -10,3 +10,19 @@ export const GET_ME = gql`
     }
   }
 `;
+
+export const ALL_GIGS = gql`
+query gigs {
+  gigs{
+  _id  
+  tourName
+  eventDate
+  eventTime
+  venue
+  description
+  links
+  image
+  }
+}`;
+
+

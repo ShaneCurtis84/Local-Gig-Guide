@@ -2,9 +2,8 @@ const { Schema, model } = require("mongoose");
 
 const gigSchema = new Schema({
 
-  
   tourName: {
-    type: String,
+  type: String,
   },
   eventDate: {
     type: String,
@@ -21,7 +20,7 @@ const gigSchema = new Schema({
   links: {
     type: String,
   },
-  city: {
+  image: {
     type: String,
   },
 });

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+import NavBar from './Navbar';
 
 
 const Header = () => {
     return (
         <header>
-           <Link to='/' >Local Gig Guide </Link>
+         <NavBar/>
         </header>
     );
 };

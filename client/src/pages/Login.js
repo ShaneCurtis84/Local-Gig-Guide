@@ -47,38 +47,43 @@ const Login = () => {
 
     return (
      
-      
-      <div>
-                <div>Login</div>
+       <div className="body-loginSignup">
+          <main>
+
+            <div className="formDiv">
+                <div className="login">
                 {error && <div>{error.message}</div>}
                 <form>
-                    <div>
-                        <label>Enter Your Email</label>
+                    
+                <label>Login</label>
                         <input
                             
-                            placeholder='email'
+                            placeholder='Please enter your email'
                             name='email'
                             type='email'
                             value={userFormData.email}
                             onChange={handleInputChange}
+                            required=""
                         />
-                    </div>
-                    <div>
-                        <label>Enter Your Password</label>
+                  
+                  
+                        
                         <input
                             
-                            placeholder='password'
+                            placeholder='Please enter your password'
                             name='password'
                             type='password'
                             value={userFormData.password}
                             onChange={handleInputChange}
+                            required=""
                         />
-                    </div>
-                    <button id='login-button' onClick={handleFormSubmit}>Submit</button>
+                  
+                    <button id='login-button' onClick={handleFormSubmit}>Login</button>
                 </form>
             </div>
-
-       
+            </div>
+   </main>
+   </div>
      
     );
   };

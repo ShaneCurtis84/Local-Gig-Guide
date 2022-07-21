@@ -23,3 +23,25 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_GIG = gql`
+mutation addGig($tourName:String!
+  $eventDate:String!
+  $eventTime:String!
+  $venue:String!
+  $description:String!
+  $links:String!
+  $image:String!) {
+  addGig(tourName: $tourName, eventDate: $eventDate, eventTime: $eventTime, venue: $venue, description: $description, links: $links, image: $image) {
+    _id
+    tourName
+    eventDate
+    eventTime
+    venue
+    description
+    links
+    image
+
+  } 
+  }
+`

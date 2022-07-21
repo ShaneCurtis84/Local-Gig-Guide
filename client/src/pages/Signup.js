@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Auth from "../utils/auth";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
+import "./signup.css"
 
 
 
@@ -40,50 +41,57 @@ const Signup = () => {
 
 
     return (
-      <div>
+      
+           
+             <main>
 
-<div>
-                <div>Signup</div>
+                
+              <div className="formDiv">
+              
+
+              <div className="signup">
                 {error && <div>{error.message}</div>}
                 <form>
-                    <div>
-                        <label>Create a Username</label>
+                <label>Sign up</label>
+                       
                         <input
                             
-                            placeholder='username'
+                            placeholder='Please enter a username'
                             name='username'
                             type='text'
                             value={userFormData.username}
                             onChange={handleInputChange}
+                            required=""
                         />
-                    </div>
-                    <div>
-                        <label>Enter Your Email</label>
+                    
+                    
                         <input
                             
-                            placeholder='email'
+                            placeholder='Please enter your email address'
                             name='email'
                             type='email'
                             value={userFormData.email}
                             onChange={handleInputChange}
+                            required=""
                         />
-                    </div>
-                    <div>
-                        <label>Create a Password</label>
+                   
+                      
                         <input
                             
-                            placeholder='password'
+                            placeholder='Please enter a password'
                             name='password'
                             type='password'
                             value={userFormData.password}
                             onChange={handleInputChange}
+                            required=""
                         />
-                    </div>
-                    <button id='signup-button' onClick={handleFormSubmit}>Submit</button>
+                    
+                    <button id='signup-button' onClick={handleFormSubmit}>Sign Up</button>
                 </form>
             </div>
-       
-      </div>
+            </div>
+         </main>
+     
     );
   };
   
