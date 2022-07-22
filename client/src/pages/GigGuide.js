@@ -26,12 +26,13 @@ const GigGuide = () => {
   }
   return (
       <Fragment>
-          <div className='project-body'>
-            <div className='container'>
+          <div className='main'>
+           
         
               <Giglist gigs={data.gigs} />
+              
               </div>
-         </div>
+        
       </Fragment>
   );
 

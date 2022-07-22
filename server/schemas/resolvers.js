@@ -46,11 +46,11 @@ const resolvers = {
       return { token, user };
     },
 
-    addGig: async (parent, {tourName,eventDate,eventTime,venue,description,links,image}) => {
+    addGig: async (_, {tourName,eventDate,eventTime,venue,description,links,image}) => {
 
-       const gig = await Gig.create({tourName,eventDate,eventTime,venue,description,links,image});
+      return Gig.create({tourName,eventDate,eventTime,venue,description,links,image});
 
-       return { gig };
+    
     
     },
 

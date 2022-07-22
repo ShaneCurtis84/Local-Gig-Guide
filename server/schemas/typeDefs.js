@@ -26,9 +26,6 @@ type User {
   }
 
 
-
-
-
   type Gig {
   _id:ID
   tourName:String!
@@ -39,8 +36,6 @@ type User {
   links:String!
   image:String!
   
-
-
 
   }
   

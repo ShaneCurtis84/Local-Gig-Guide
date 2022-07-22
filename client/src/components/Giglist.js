@@ -7,32 +7,36 @@ import "./giglist.css";
 const Giglist = ({gigs}) => {
     return (
       
-                <div className='row'>
+       
+        <div className="card-row">
         {gigs &&
             gigs.map((gig) => (
-                <div className='card-01' key={gig._id}>
+               
+                  <div className='card' key={gig._id}>
+                   <img src={gig.image} alt='gigs'></img>
+                    <div className='card_content'>
+                    <h3 className='card_title'>{gig.tourName}</h3>
+                    <p>Date: {gig.eventDate}</p>
+                    <p>Time: {gig.eventTime}</p>
+                    <p>Venue: {gig.venue}</p>
+                    <p className="card_text">{gig.description}</p>
+                    <button className="btn card_btn"><a href={gig.links}target="_blank" rel="noopener noreferrer">More Info</a></button>
+  
+                    </div>
+                    
+                    </div>
+                                 
                   
-                    <div className='card-header'>
-                    <h3> {gig.tourName}</h3>
-                    <p> {gig.eventDate}!</p>
-                    </div>
-                    <div className='card-body' >
-                    <img src={gig.image} alt='gigs' className='project-image'></img>
-                    <p>{gig.description}</p>
-                   </div>
-                   <div className='card-footer'>
-                   <p>{gig.eventTime}</p>
-                    <p>{gig.venue}</p>
-                    </div>
-                   
                 
-                </div>
+               
             ))}
           
-
-
-    </div>
+       
+          </div>
+          
     );
+
+   
 };
 
 export default Giglist;

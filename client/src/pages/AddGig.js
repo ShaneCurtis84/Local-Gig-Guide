@@ -52,9 +52,13 @@ const AddGig = () => {
         description: "",
         links: "",
         image: "",
+
+        
      });
+     window.location.assign("/gigguide");
     };
 
+ 
     
       
     return (

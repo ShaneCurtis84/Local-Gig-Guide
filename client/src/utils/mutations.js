@@ -25,7 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_GIG = gql`
-mutation addGig($tourName:String!
+mutation addGig(
+  $tourName:String!
   $eventDate:String!
   $eventTime:String!
   $venue:String!
