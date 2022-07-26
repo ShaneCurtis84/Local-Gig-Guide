@@ -25,7 +25,10 @@ import EditGig from "./pages/EditGig";
 import DeleteGig from "./pages/DeleteGig";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql",
+  //uri: "http://localhost:3001/graphql",
+
+    uri: "/graphql",
+
 });
 
 const authLink = setContext((_, { headers }) => {
