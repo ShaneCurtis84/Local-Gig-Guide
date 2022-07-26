@@ -7,7 +7,7 @@ h2 {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  margin:  0px 10px;
+  margin: 0px 10px;
 }
 
 .card {
@@ -21,9 +21,10 @@ h2 {
 }
 
 .card:hover {
-  box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.15);
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.15);
 }
-.card > img {
+
+.card>img {
   border-radius: 2px;
   max-width: 100%;
   margin-bottom: 10px;
@@ -38,4 +39,9 @@ h2 {
   color: #757575;
   line-height: 1.5;
   padding-top: 10px;
+}
+
+button a {
+
+  color: #edeae5;
 }

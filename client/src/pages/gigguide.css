@@ -1,6 +1,14 @@
+.container {
+
+  background: url("../assets/images/concert4.jpg") no-repeat center center
+  fixed;
+background-size: cover;
+}
+
 .main {
-    background-color: #EDFDED;
+    
     max-width: 1200px;
     margin: auto;
-    min-height: 100vw;
+    min-height: 100vh;
+
   }

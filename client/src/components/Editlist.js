@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./giglist.css";
 
-const Giglist = ({ gigs }) => {
+const Editlist = ({ gigs }) => {
   return (
     <div className="card-row">
       {gigs &&
@@ -15,9 +17,16 @@ const Giglist = ({ gigs }) => {
               <p>Venue: {gig.venue}</p>
               <p className="card_text">{gig.description}</p>
               <button className="btn card_btn">
-                <a href={gig.links} target="_blank" rel="noopener noreferrer">
-                  More Info
-                </a>
+                {" "}
+                <Link className="linkText" to={`/delete/${gig._id}`}>
+                  Delete Gig
+                </Link>
+              </button>
+              <button className="btn card_btn">
+                {" "}
+                <Link className="linkText" to={`/edit/${gig._id}`}>
+                  Edit Gig
+                </Link>
               </button>
             </div>
           </div>
@@ -26,4 +35,4 @@ const Giglist = ({ gigs }) => {
   );
 };
 
-export default Giglist;
+export default Editlist;
