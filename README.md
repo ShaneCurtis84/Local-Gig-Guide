@@ -41,8 +41,9 @@ and manage them.
    
  ## Images
 
-![tests ](https://github.com/ShaneCurtis84/Book-Search-Engine/blob/main/assets/images/screenshot1.PNG)
-![tests ](https://github.com/ShaneCurtis84/Book-Search-Engine/blob/main/assets/images/screenshot2.PNG)
+![tests ](https://github.com/ShaneCurtis84/Local-Gig-Guide/blob/main/assets/images/screenshot1.PNG)
+![tests ](https://github.com/ShaneCurtis84/Local-Gig-Guide/blob/main/assets/images/screenshot2.PNG)
+![tests ](https://github.com/ShaneCurtis84/Local-Gig-Guide/blob/main/assets/images/screenshot3.PNG)
 
 
 
